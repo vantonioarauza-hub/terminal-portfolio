@@ -43,7 +43,7 @@ const commands = {
   </tr>
   <tr>
     <td><span class="highlight">projects</span></td>
-    <td>Active repository list with metrics</td>
+    <td>Active projects & repositories</td>
   </tr>
   <tr>
     <td><span class="highlight">about</span></td>
@@ -60,10 +60,6 @@ const commands = {
   <tr>
     <td><span class="highlight">stats</span></td>
     <td>Session diagnostics & metrics</td>
-  </tr>
-  <tr>
-    <td><span class="highlight">weather</span></td>
-    <td>Current system environment conditions</td>
   </tr>
   <tr>
     <td><span class="highlight">time</span></td>
@@ -113,60 +109,58 @@ const commands = {
     return `
 <div class="title">━━━ TECHNICAL STACK ━━━</div>
 <br>
-<span class="highlight-magenta">► Languages & Frameworks:</span>
-  • Luau (Expert)           [████████████████░░] 90%
-  • JavaScript/TypeScript   [████████████░░░░░░] 85%
-  • React & Vue             [███████████░░░░░░░] 80%
-  • Python                  [██████████░░░░░░░░] 75%
-  • C# / .NET               [█████████░░░░░░░░░] 70%
+<span class="highlight-magenta">► Core Languages & Frameworks:</span>
+  • Luau                    [████████████████░░] 95%
+  • JavaScript/ES6+         [████████████░░░░░░] 85%
+  • HTML5 & CSS3            [███████████░░░░░░░] 80%
 <br>
-<span class="highlight-magenta">► Architecture & Systems:</span>
-  • Object-Oriented Design  [████████████████░░] 90%
-  • System Architecture     [███████████████░░░] 88%
-  • Microservices           [██████████░░░░░░░░] 75%
-  • Database Design         [███████████░░░░░░░] 80%
-  • API Development         [█████████████░░░░░] 85%
+<span class="highlight-magenta">► Roblox Specialization:</span>
+  • Framework Architecture  [████████████████░░] 90%
+  • Game Systems Design     [█████████████░░░░░] 85%
+  • DataStore Integration   [████████████████░░] 90%
+  • OOP & Design Patterns   [████████████░░░░░░] 85%
 <br>
-<span class="highlight-magenta">► Tools & Platforms:</span>
-  • Git / GitHub            [████████████████░░] 92%
-  • Docker & Kubernetes     [██████████░░░░░░░░] 75%
-  • Blender 3D              [███████░░░░░░░░░░░] 65%
-  • CI/CD Pipelines         [██████████████░░░░] 82%
-  • Linux/Unix Systems      [███████████████░░░] 88%
+<span class="highlight-magenta">► Web Development:</span>
+  • Frontend Development    [███████████░░░░░░░] 80%
+  • Responsive Design       [██████████░░░░░░░░] 75%
+  • Interactive UI/UX       [███████████░░░░░░░] 80%
+<br>
+<span class="highlight-magenta">► Developer Tools:</span>
+  • Git & GitHub            [████████████████░░] 92%
+  • Visual Studio Code      [█████████████░░░░░] 85%
+  • Roblox Studio           [████████████████░░] 92%
+  • Web Development Tools   [███████████░░░░░░░] 80%
     `;
   },
 
   projects: function() {
     return `
-<div class="title">━━━ ACTIVE REPOSITORIES ━━━</div>
+<div class="title">━━━ ACTIVE PROJECTS ━━━</div>
 <br>
 <span class="highlight-cyan">[1] Kaze-Machi</span>
-    Genre: Game Architecture Framework
+    Type: Game Framework Architecture
+    Platform: Roblox
     Status: <span class="success">PRODUCTION</span>
-    Metrics: 2.4K Stars | 156 Forks | 89% Test Coverage
-    Description: Scalable game systems & advanced map layout architecture
-    Technologies: Luau, Roblox Studio, DataStores
+    Experience: 6 years of iterative development
+    Description: Advanced Roblox game framework specializing in scalable game systems architecture, map integration patterns, and server/client synchronization.
+    Technologies: Luau, Roblox Studio, DataStore Systems
+    Features:
+      • Modular game system architecture
+      • Seamless map integration & loading
+      • Efficient player data persistence
+      • Real-time server-client communication
 <br>
 <span class="highlight-cyan">[2] Web-Terminal</span>
-    Genre: Interactive Development Environment
+    Type: Interactive Portfolio & Development Environment
+    Platform: Web (Browser-based)
     Status: <span class="success">ACTIVE</span>
-    Metrics: 1.8K Stars | 245 Forks | 94% Uptime
-    Description: Customized terminal-based GitHub environment simulator
-    Technologies: JavaScript, CSS3, WebGL
-<br>
-<span class="highlight-cyan">[3] CrimsonEngine</span>
-    Genre: Real-time Rendering Engine
-    Status: <span class="success">BETA</span>
-    Metrics: 956 Stars | 89 Forks | GPU Accelerated
-    Description: High-performance 3D rendering with advanced lighting
-    Technologies: C++, OpenGL, GLSL
-<br>
-<span class="highlight-cyan">[4] NeuralNet Pro</span>
-    Genre: Machine Learning Framework
-    Status: <span class="info">IN DEVELOPMENT</span>
-    Metrics: 1.2K Stars | 67 Forks | 45% Complete
-    Description: Lightweight deep learning framework for edge computing
-    Technologies: Python, TensorFlow, CUDA
+    Description: Custom terminal-based portfolio website simulating a development environment. Showcases projects, skills, and system diagnostics through an interactive CLI interface.
+    Technologies: JavaScript ES6+, HTML5, CSS3, DOM APIs
+    Features:
+      • Interactive command-line interface
+      • Project showcase & documentation
+      • Real-time system diagnostics
+      • Responsive terminal design
     `;
   },
 
@@ -174,26 +168,31 @@ const commands = {
     return `
 <div class="title">━━━ DEVELOPER PROFILE ━━━</div>
 <br>
-<span class="highlight-cyan">Name:</span> Full-Stack Developer & Systems Architect
-<span class="highlight-cyan">Experience:</span> 8+ years in software engineering
-<span class="highlight-cyan">Philosophy:</span> "Code elegance meets performance optimization"
+<span class="highlight-cyan">Name:</span> Full-Stack Luau Developer & Systems Architect
+<span class="highlight-cyan">Grade:</span> 11th Grade
+<span class="highlight-cyan">Specialization:</span> Roblox Framework Engineering + Web Development
+<span class="highlight-cyan">Experience:</span> 6 years of professional Roblox development
 <br>
-<span class="highlight-magenta">Core Values:</span>
-  ✦ Simplicity through clarity
-  ✦ Performance through design
-  ✦ Reliability through testing
-  ✦ Scalability through architecture
+<span class="highlight-magenta">Core Philosophy:</span>
+Bridging the gap between Roblox framework engineering and modern web development. 
+I specialize in building scalable, maintainable systems that prioritize clean code 
+architecture and performance optimization.
+<br>
+<span class="highlight-magenta">Key Values:</span>
+  ✦ Code clarity over clever solutions
+  ✦ Scalable architecture from the start
+  ✦ Continuous learning & improvement
+  ✦ Community contribution & mentorship
 <br>
 <span class="highlight-magenta">Specializations:</span>
-  ► Game Engine Development
-  ► Real-time Systems Architecture
-  ► High-Performance Computing
-  ► Database Optimization
-  ► DevOps & Infrastructure
+  ► Roblox Game Framework Architecture
+  ► Object-Oriented Design & Patterns
+  ► Game Systems Design & Integration
+  ► Full-Stack Web Development
+  ► Interactive UI/UX Implementation
 <br>
-Passionate about building elegant solutions that scale.
-Constant learner of emerging technologies.
-Open-source contributor & community advocate.
+Passionate about creating elegant solutions that scale. Active in open-source 
+communities and dedicated to continuous learning of emerging technologies.
     `;
   },
 
@@ -260,24 +259,6 @@ Open-source contributor & community advocate.
     return `<span class="highlight-cyan">System Time:</span> ${formatted}`;
   },
 
-  weather: function() {
-    const conditions = [
-      { status: 'Optimal', temp: '98.6°F', humidity: '42%', emoji: '⚡' },
-      { status: 'Clear Skies', temp: '72°F', humidity: '35%', emoji: '☀️' },
-      { status: 'Light Protocols', temp: '68°F', humidity: '50%', emoji: '🌤️' },
-      { status: 'Data Storm', temp: '104°F', humidity: '89%', emoji: '⛈️' }
-    ];
-    const condition = conditions[Math.floor(Math.random() * conditions.length)];
-    return `
-<span class="highlight-magenta">System Weather Report:</span>
-Condition: ${condition.emoji} <span class="highlight">${condition.status}</span>
-Temperature: <span class="warning">${condition.temp}</span>
-Humidity: ${condition.humidity}
-Pressure: 1013.25 mbar
-Wind Speed: Variable
-    `;
-  },
-
   ascii: function() {
     return `
 <div class="ascii-art">
@@ -298,25 +279,30 @@ Wind Speed: Variable
     `;
   },
 
-  hack: function() {
-    let output = '<div class="title">━━━ INITIALIZING SECURITY BREACH ━━━</div><br>';
-    output += '<span class="info">Scanning network architecture...</span><br>';
-    
-    setTimeout(() => {}, 200);
-    
-    const tasks = [
-      '[████████░░] 82% - Port enumeration in progress',
-      '[██████████] 100% - Firewall vulnerabilities identified',
-      '[████████░░] 84% - Decrypting authentication protocols',
-      '[██████████] 100% - Privilege escalation vector found'
-    ];
-    
-    tasks.forEach((task, idx) => {
-      output += task + '<br>';
+  hack: async function() {
+    // Return a promise that resolves after async operations
+    return new Promise(async (resolve) => {
+      let output = '<div class="title">━━━ INITIALIZING SECURITY ANALYSIS ━━━</div><br>';
+      output += '<span class="info">Scanning network architecture...</span><br>';
+      renderOutput(output);
+      
+      const tasks = [
+        { progress: 82, text: 'Port enumeration in progress' },
+        { progress: 100, text: 'Firewall vulnerabilities identified' },
+        { progress: 84, text: 'Decrypting authentication protocols' },
+        { progress: 100, text: 'Privilege escalation vector found' }
+      ];
+      
+      for (const task of tasks) {
+        await new Promise(resolve => setTimeout(resolve, 800));
+        const bar = '█'.repeat(Math.floor(task.progress / 10)) + '░'.repeat(10 - Math.floor(task.progress / 10));
+        renderOutput(`[${bar}] ${task.progress}% - ${task.text}`);
+      }
+      
+      await new Promise(resolve => setTimeout(resolve, 600));
+      renderOutput('<span class="success">▶ Access Granted. Welcome to the system.</span>', 'success');
+      resolve();
     });
-    
-    output += '<br><span class="success">▶ Access Granted. Welcome to the system.</span>';
-    return output;
   },
 
   system: function() {
@@ -383,7 +369,7 @@ Packets: <span class="success">0% loss</span>
     `;
   },
 
-  ls: function(args) {
+  ls: function() {
     const files = [
       '📁 projects/',
       '📁 documents/',
@@ -398,7 +384,7 @@ Packets: <span class="success">0% loss</span>
   },
 
   whoami: function() {
-    return `<span class="highlight-cyan">root</span>@<span class="highlight-magenta">nexus</span>`;
+    return `<span class="highlight-cyan">developer</span>@<span class="highlight-magenta">nexus</span>`;
   },
 
   echo: function(args) {
@@ -410,7 +396,7 @@ Packets: <span class="success">0% loss</span>
 
   clear: function() {
     history.innerHTML = '';
-    return null;
+    return 'clear'; // Return special marker
   },
 
   exit: function() {
@@ -419,7 +405,7 @@ Packets: <span class="success">0% loss</span>
       renderOutput('<span class="success">Session terminated. Thanks for visiting!</span>', 'success');
       input.disabled = true;
     }, 500);
-    return null;
+    return 'exit'; // Return special marker
   },
 
   easter: function() {
@@ -439,20 +425,20 @@ function getDetailedHelp(cmd) {
   const details = {
     skills: 'Display your technical expertise and proficiency levels across various technologies and frameworks.',
     projects: 'View all active projects with detailed metrics, descriptions, and technologies used.',
+    about: 'View developer background, philosophy, specializations, and core values.',
     quote: 'Display a random quote about programming or development philosophy.',
     matrix: 'Trigger a digital rain effect similar to The Matrix movie.',
     stats: 'Show current session statistics including commands executed and uptime.',
     time: 'Display the current system time and date in formatted output.',
     ascii: 'Show ASCII art and visual graphics.',
-    hack: 'Run a fake hacking/security breach simulation sequence.',
+    hack: 'Run a realistic hacking/security analysis simulation with staggered progress.',
     system: 'Display detailed system specifications and hardware information.',
     network: 'Show network diagnostics, latency, bandwidth, and routing information.',
     ls: 'List directory contents and files.',
     whoami: 'Display current user information.',
     echo: 'Print text to the terminal.',
     clear: 'Clear all terminal history and start fresh.',
-    exit: 'Close the terminal session.',
-    about: 'View developer background, philosophy, and specializations.'
+    exit: 'Close the terminal session gracefully.'
   };
   
   if (details[cmd]) {
@@ -462,7 +448,7 @@ function getDetailedHelp(cmd) {
   }
 }
 
-input.addEventListener('keydown', (e) => {
+input.addEventListener('keydown', async (e) => {
   if (e.key === 'Enter') {
     const rawCmd = input.value.trim();
     
@@ -472,7 +458,7 @@ input.addEventListener('keydown', (e) => {
       
       const [cmdName, ...args] = rawCmd.split(/\s+/);
       const cmd = cmdName.toLowerCase();
-      processCommand(cmd, args);
+      await processCommand(cmd, args);
     }
     
     input.value = '';
@@ -493,25 +479,33 @@ function echoCommand(cmd) {
   history.appendChild(echoLine);
 }
 
-function processCommand(cmd, args) {
+async function processCommand(cmd, args) {
+  // Handle clear command specially
   if (cmd === 'clear') {
     history.innerHTML = '';
+    return;
+  }
+  
+  // Handle exit command specially
+  if (cmd === 'exit') {
+    renderOutput('Closing terminal session...', 'warning');
+    setTimeout(() => {
+      renderOutput('<span class="success">Session terminated. Thanks for visiting!</span>', 'success');
+      input.disabled = true;
+    }, 500);
     return;
   }
   
   let response = commands[cmd];
   
   if (typeof response === 'function') {
-    response = response(args);
+    response = await response(args);
   }
   
-  if (response) {
-    if (cmd === 'echo') {
-      renderOutput(response);
-    } else {
-      renderOutput(response, '');
-    }
-  } else {
+  // Only render output if response is not a special marker (clear/exit)
+  if (response && response !== 'clear' && response !== 'exit') {
+    renderOutput(response, '');
+  } else if (!response) {
     renderOutput(`<span class="error">zsh: command not found: ${cmd}</span><br>Type <span class="highlight">help</span> for available commands.`, 'error');
   }
 }

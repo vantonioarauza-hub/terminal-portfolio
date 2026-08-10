@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dev Terminal</title>
+  <title>Elite Dev Terminal</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="cursor-glow"></div>
   <main id="terminal-container">
     <div id="history"></div>
     <div class="input-line">
-      <span id="prompt-path">guest@system</span><span id="prompt-symbol">:~$</span>
+      <span id="prompt-path">root@nexus</span><span id="prompt-symbol">▶</span>
       <input type="text" id="command-input" autofocus autocomplete="off" spellcheck="false" />
     </div>
   </main>

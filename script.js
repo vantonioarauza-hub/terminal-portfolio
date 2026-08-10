@@ -1,86 +1,89 @@
 const input = document.getElementById('command-input');
 const history = document.getElementById('history');
+const cursorGlow = document.getElementById('cursor-glow');
+let commandCount = 0;
+let sessionStartTime = Date.now();
 
-// Boot Sequence
+// Track cursor glow
+document.addEventListener('mousemove', (e) => {
+  cursorGlow.style.left = (e.clientX - 150) + 'px';
+  cursorGlow.style.top = (e.clientY - 150) + 'px';
+});
+
 window.onload = () => {
-  renderOutput("Initializing Luau Dev Environment...", "string");
-  setTimeout(() => {
-    renderOutput("Welcome, Vicente. Type <span class='highlight'>help</span> to begin.", "");
-  }, 600);
-};
-
-// Command Database
-const fileSystem = {
-  whoami: `<span class="title">Vicente Arauz</span><br>
-           11th Grade @ CEP | Full-Stack Luau Developer<br>
-           Currently bridging Roblox architecture with modern Web Dev.`,
-           
-  skills: `> <span class="highlight">Core:</span> Luau, Roblox Frameworks, DataStores, OOP<br>
-           > <span class="highlight">Web:</span> HTML5, CSS3, JavaScript (ES6+)<br>
-           > <span class="highlight">Tools:</span> Moon Animator, Blender, Git`,
-           
-  projects: `[1] <span class="highlight">Kaze-Machi</span>: Coastal town map integration & Luau codebase architecture.<br>
-             [2] <span class="highlight">Terminal Portfolio</span>: Raw JS/CSS interface.`,
-             
-  sports: `> <span class="highlight">Gridiron:</span> Vicente 'Nine' Arauz (Defensive Tackle / Edge Rusher)<br>
-           > <span class="highlight">Pitch:</span> 'La Pantera' (Striker)`,
-           
-  status: `Working on Kaze-Machi. Counting down to Daniel Caesar in Bogotá (Nov 2026).`,
+  renderOutput("╔════════════════════════════════════════════════════════════════╗", "info");
+  renderOutput("║          <span class='highlight-cyan'>NEXUS COMMAND TERMINAL v4.2.1</span>          ║", "info");
+  renderOutput("║          <span class='highlight-magenta'>Advanced Development Environment</span>          ║", "info");
+  renderOutput("╚════════════════════════════════════════════════════════════════╝", "info");
   
-  help: `Available commands:<br>
-         <span class="highlight">whoami</span>   - Developer identity<br>
-         <span class="highlight">skills</span>   - Technical stack<br>
-         <span class="highlight">projects</span> - Current work<br>
-         <span class="highlight">sports</span>   - Athletics info<br>
-         <span class="highlight">status</span>   - Current objective<br>
-         <span class="highlight">clear</span>    - Wipe terminal output`
+  setTimeout(() => {
+    renderOutput("System initialized. Type <span class='highlight'>help</span> for available commands.", "success");
+    renderOutput("Type <span class='highlight'>help [command]</span> for detailed info. Type <span class='highlight'>easter</span> for fun surprises!", "");
+  }, 300);
 };
 
-// Event Listener for Input
-input.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') {
-    const rawCmd = input.value.trim();
-    const cmd = rawCmd.toLowerCase();
-    
-    if (rawCmd !== "") {
-      echoCommand(rawCmd);
-      processCommand(cmd);
+const commands = {
+  help: function(args) {
+    if (args.length > 0) {
+      return getDetailedHelp(args[0]);
     }
-    
-    input.value = '';
-    window.scrollTo(0, document.body.scrollHeight);
-  }
-});
-
-// Force focus on input when clicking anywhere
-document.addEventListener('click', () => {
-  input.focus();
-});
-
-// Helper Functions
-function echoCommand(cmd) {
-  const echoLine = document.createElement('div');
-  echoLine.className = 'history-block cmd-echo';
-  echoLine.innerHTML = `vicente@cep:~ $ ${cmd}`;
-  history.appendChild(echoLine);
-}
-
-function processCommand(cmd) {
-  if (cmd === 'clear') {
-    history.innerHTML = '';
-    return;
-  }
-
-  if (fileSystem[cmd]) {
-    renderOutput(fileSystem[cmd]);
-  } else {
-    renderOutput(`zsh: command not found: ${cmd}`, 'error');
-  }
-}
-
-function renderOutput(htmlContent, extraClass = '') {
-  const outputWrapper = document.createElement('div');
-  outputWrapper.className = `history-block cmd-output ${extraClass}`;
-  outputWrapper.innerHTML = htmlContent;
-  history.appendChild(outputWrapper);
-}
+    return `
+<table class="table">
+  <tr>
+    <th>Command</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><span class="highlight">help</span> [cmd]</td>
+    <td>Show all commands or details on specific command</td>
+  </tr>
+  <tr>
+    <td><span class="highlight">skills</span></td>
+    <td>View technical stack & expertise</td>
+  </tr>
+  <tr>
+    <td><span class="highlight">projects</span></td>
+    <td>Active repository list with metrics</td>
+  </tr>
+  <tr>
+    <td><span class="highlight">about</span></td>
+    <td>Developer background & philosophy</td>
+  </tr>
+  <tr>
+    <td><span class="highlight">quote</span></td>
+    <td>Random programming wisdom</td>
+  </tr>
+  <tr>
+    <td><span class="highlight">matrix</span></td>
+    <td>Trigger digital rain simulation</td>
+  </tr>
+  <tr>
+    <td><span class="highlight">stats</span></td>
+    <td>Session diagnostics & metrics</td>
+  </tr>
+  <tr>
+    <td><span class="highlight">weather</span></td>
+    <td>Current system environment conditions</td>
+  </tr>
+  <tr>
+    <td><span class="highlight">time</span></td>
+    <td>Display current system time & date</td>
+  </tr>
+  <tr>
+    <td><span class="highlight">ascii</span></td>
+    <td>Display ASCII art collection</td>
+  </tr>
+  <tr>
+    <td><span class="highlight">hack</span></td>
+    <td>Simulate hacking sequence</td>
+  </tr>
+  <tr>
+    <td><span class="highlight">system</span></td>
+    <td>View system specifications</td>
+  </tr>
+  <tr>
+    <td><span class="highlight">network</span></td>
+    <td>Network diagnostics & info</td>
+  </tr>
+  <tr>
+    <td><span
